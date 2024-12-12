@@ -9,6 +9,15 @@ public class RageState : State
     public override void Entry()
     {
         base.Entry();
+        Boss.StartCoroutine(Burp());
         Debug.Log("Rage State Entered");
     }
+
+    IEnumerator Burp()
+    {
+        yield return new WaitForSeconds(5f);
+        Boss.ChangeStateKey(States.Burp);
+    }
+
+
 }

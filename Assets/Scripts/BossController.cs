@@ -13,6 +13,16 @@ public class BossController : MonoBehaviour
     State currentState;
     Dictionary<States, State> statesDict = new Dictionary<States, State>();
 
+
+    public GameObject proyectilPrefab; // Prefab del proyectil
+    public Transform proyectilTransforInstanciacion;    // Punto desde donde se dispara
+    public float proyectilVelocity = 10f;
+    public GameObject toxicCloudPrefab; // Prefab del proyectil
+    public Transform toxicCloudTransforInstanciacion;    // Punto desde donde se dispara
+
+
+
+
     // ready
     void Start() 
     {
@@ -62,7 +72,50 @@ public class BossController : MonoBehaviour
         currentState.Exit();
         currentState = newState;
         currentState.Entry();
-    }    
+    }
+
+
+
+    public void starSpit()
+    {
+        // Instanciar el proyectil en el punto de disparo con la rotación actual
+        if (proyectilPrefab != null && proyectilTransforInstanciacion != null)
+        {
+            GameObject proyectil = Object.Instantiate(proyectilPrefab, proyectilTransforInstanciacion.position, proyectilTransforInstanciacion.rotation);
+
+            // Añadir fuerza al proyectil si tiene un Rigidbody2D
+            Rigidbody2D rb = proyectil.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                // Aplica una fuerza en la dirección deseada (right para 2D)
+                Vector2 direccion = proyectilTransforInstanciacion.right * proyectilVelocity;
+                rb.AddForce(direccion, ForceMode2D.Impulse); // Modo Impulse para una fuerza instantánea
+            }
+            else
+            {
+                Debug.LogError("El proyectil no tiene un Rigidbody2D.");
+            }
+        }
+        else
+        {
+            Debug.LogError("ProyectilPrefab o PuntoDisparo no están asignados en el BossController.");
+        }
+    }
+
+    public void starBurp()
+    {
+        // Instanciar el toxicCloud
+        if (toxicCloudPrefab != null && toxicCloudTransforInstanciacion != null)
+        {
+            GameObject toxicCloud = Object.Instantiate(toxicCloudPrefab, toxicCloudTransforInstanciacion.position, toxicCloudTransforInstanciacion.rotation);
+
+        }
+        else
+        {
+            Debug.LogError("toxicCloudPrefab o toxicCloudTransforInstanciacion no están asignados en el BossController.");
+        }
+    }
+
 }
 
 public enum States

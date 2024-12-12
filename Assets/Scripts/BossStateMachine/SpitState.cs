@@ -6,14 +6,18 @@ public class SpitState : State
 {
     public SpitState(BossController Boss) : base(Boss) {}
 
+    
+
     public override void Entry()
     {
         base.Entry();
         Debug.Log("Spit State Entered");
-        
+
         // instanciar proyectil
-        
+        Boss.starSpit();
+
         // siguiente estado
         Boss.ChangeStateKey(States.Recovery);
     }
+
 }

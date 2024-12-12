@@ -10,16 +10,19 @@ public class BurpState : State
     {
         base.Entry();
         Debug.Log("Burp State Entered");
-        // activar animación follow
+        //burp(eructar)
+        Boss.starBurp();
+        // siguiente estado
+        Boss.ChangeStateKey(States.Rage);
     }
 
     public override void Exit()
     {
-        // terminar animación follow
+        
     }
 
     public override void Update()
     {
-        // buscar jugador y seguir
+        
     }
 }

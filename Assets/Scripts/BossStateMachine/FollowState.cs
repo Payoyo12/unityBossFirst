@@ -16,6 +16,13 @@ public class FollowState : State
     public override void Update()
     {
         base.Update();
+
+        
+        
+
+
+
+
         if(Boss.GetHealthPercentage() < .5f) Boss.ChangeStateKey(States.Rage);
     }
 

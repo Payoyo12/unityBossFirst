@@ -4599,7 +4599,7 @@ Transform:
   m_GameObject: {fileID: 226466822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.99, y: -0.96, z: 0}
+  m_LocalPosition: {x: -4.64, y: -0.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4836,7 +4836,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.99, y: -0.96, z: -10}
+  m_LocalPosition: {x: -4.64, y: -0.96, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11923,7 +11923,7 @@ Transform:
   m_GameObject: {fileID: 2135995489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.99, y: -0.96, z: -10}
+  m_LocalPosition: {x: -4.64, y: -0.96, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11942,17 +11942,13 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 226466827}
-    - target: {fileID: 1774373112110196403, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
-      propertyPath: ToxicArea
-      value: 
-      objectReference: {fileID: 248195346127487389}
     - target: {fileID: 4227307048293196948, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_Name
       value: Death
       objectReference: {fileID: 0}
     - target: {fileID: 8636563346488724124, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.28
+      value: -8.59
       objectReference: {fileID: 0}
     - target: {fileID: 8636563346488724124, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11995,11 +11991,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
---- !u!1 &248195346127487389 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3928934747740806860, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
-  m_PrefabInstance: {fileID: 248195346127487388}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

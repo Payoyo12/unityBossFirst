@@ -5,7 +5,9 @@ using UnityEngine;
 public class BossController : MonoBehaviour
 {
     [SerializeField] private GameObject ToxicArea;
-    [SerializeField] private PlayerController Player;
+    [SerializeField] private PlayerController PlayerControler;
+    [SerializeField] private GameObject Player;
+    [SerializeField] public float bossVelocity = 5;
 
     public float currentHealth;
     private float maxHealth = 200;
@@ -20,7 +22,7 @@ public class BossController : MonoBehaviour
     public GameObject toxicCloudPrefab; // Prefab del proyectil
     public Transform toxicCloudTransforInstanciacion;    // Punto desde donde se dispara
 
-
+    
 
 
     // ready
@@ -48,6 +50,12 @@ public class BossController : MonoBehaviour
     {
         // llamar update del estado actual
         currentState.Update();
+    }
+
+
+    public GameObject getPlayer()
+    {
+        return Player;
     }
 
     public float GetHealthPercentage()

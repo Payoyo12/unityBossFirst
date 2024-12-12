@@ -11941,6 +11941,14 @@ PrefabInstance:
     - target: {fileID: 1774373112110196403, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: Player
       value: 
+      objectReference: {fileID: 226466822}
+    - target: {fileID: 1774373112110196403, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: bossVelocity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1774373112110196403, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
+      propertyPath: PlayerControler
+      value: 
       objectReference: {fileID: 226466827}
     - target: {fileID: 4227307048293196948, guid: cba0f87b08d655a4993e32b24d498d2b, type: 3}
       propertyPath: m_Name
